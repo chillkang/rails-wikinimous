@@ -1,0 +1,7 @@
+<h1><%= @article.title %></h1>
+<p><%= @article.content %></p>
+
+<%= link_to 'Wikiminous', articles_path %>
+<%= link_to 'Edit the task', edit_article_path(@article) %>
+<%= link_to "New article", new_article_path %>
+<%= link_to "Delete #{@article.title}", article_path(@article), method: :delete, data: {confirm: 'Do you really want to?'} %>
